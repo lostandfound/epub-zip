@@ -1,0 +1,16 @@
+{
+  "name": "epub-zip",
+  "version": "0.0.1",
+  "description": "epub packager",
+  "main": "index.js",
+  "author": "Hiroshi Takase",
+  "license": "MIT",
+  "dependencies": {
+    "jszip": "^2.4.0",
+    "lodash": "^2.4.1"
+  },
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "mocha": "^2.0.1"
+  }
+}

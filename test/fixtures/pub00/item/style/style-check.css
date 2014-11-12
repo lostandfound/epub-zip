@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+
+/* ファイル情報
+----------------------------------------------------------------
+【内容】
+チェック用スタイル
+
+【CSSファイルバージョン】
+ver.1.1.0
+
+【当ファイル更新時の電書協EPUB 3 制作ガイドバージョン】
+ver.1.1.1
+
+【細目】
+・特定 RS 対策用
+・Windows 用フォント指定
+・チェック用領域
+
+【更新履歴】
+2012/12/07 ver.1.1.0
+・ファイル更新時の電書協EPUB 3 制作ガイドバージョン表記を追加
+
+2012/08/21 ver.1.0b1
+・公開版
+---------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------
+ * 特定 RS 対策用
+ * ------------------------------------------------------------- */
+
+
+/* WebKit(Windows)用リンク指定
+----------------------------------------------------------------
+縦組みでルビを含むリンクの一部（テキストが長い場合）がクリックできない問題を回避
+---------------------------------------------------------------- */
+a ruby {
+  vertical-align: bottom;
+}
+
+
+/* WebKit(Windows)用ページ内リンク対策
+----------------------------------------------------------------
+WebKit系 で inline 要素へのページ内リンクが効かないのを回避
+---------------------------------------------------------------- */
+span.key,
+span.ref {
+  display: inline-block;
+}
+
+
+/* WebKit インデントバグ回避
+----------------------------------------------------------------
+WebKit系 で indent 指定下に inline-block があると表示が崩れるのを回避
+[class|="indent"]   .key,
+[class|="h-indent"] .key { text-indent: 0; }
+---------------------------------------------------------------- */
+/* 注釈 */
+.indent-0em  .key, .h-indent-0em  .key, .indent-0em  .ref, .h-indent-0em  .ref,
+.indent-1em  .key, .h-indent-1em  .key, .indent-1em  .ref, .h-indent-1em  .ref,
+.indent-2em  .key, .h-indent-2em  .key, .indent-2em  .ref, .h-indent-2em  .ref,
+.indent-3em  .key, .h-indent-3em  .key, .indent-3em  .ref, .h-indent-3em  .ref,
+.indent-4em  .key, .h-indent-4em  .key, .indent-4em  .ref, .h-indent-4em  .ref,
+.indent-5em  .key, .h-indent-5em  .key, .indent-5em  .ref, .h-indent-5em  .ref,
+.indent-6em  .key, .h-indent-6em  .key, .indent-6em  .ref, .h-indent-6em  .ref,
+.indent-7em  .key, .h-indent-7em  .key, .indent-7em  .ref, .h-indent-7em  .ref,
+.indent-8em  .key, .h-indent-8em  .key, .indent-8em  .ref, .h-indent-8em  .ref,
+.indent-9em  .key, .h-indent-9em  .key, .indent-9em  .ref, .h-indent-9em  .ref,
+.indent-10em .key, .h-indent-10em .key, .indent-10em .ref, .h-indent-10em .ref {
+  text-indent: 0;
+}
+
+
+/* -------------------------------------------------------------
+ * Windows 用フォント指定
+ * ------------------------------------------------------------- */
+
+/* フォントセット指定
+---------------------------------------------------------------- */
+/* 横組み用 */
+@font-face {
+  font-family: "serif-ja";
+  src: local("ＭＳ 明朝");
+}
+@font-face {
+  font-family: "sans-serif-ja";
+  src: local("ＭＳ ゴシック");
+}
+/* 縦組み用 */
+@font-face {
+  font-family: "serif-ja-v";
+  src: local("@ＭＳ 明朝");
+}
+@font-face {
+  font-family: "sans-serif-ja-v";
+  src: local("@ＭＳ ゴシック");
+}
+
+
+/* 組み方向のデフォルトフォント指定
+----------------------------------------------------------------
+@付きフォント指定が不要になるまでは、
+組み方向が変わるとき明朝で上書き（書体を継承しない）
+---------------------------------------------------------------- */
+.hltr { font-family: serif-ja, serif; }
+.vrtl { font-family: serif-ja-v, serif-ja, serif; }
+
+/* 組み方向の入れ子対策 */
+.vrtl .hltr { font-family: serif-ja, serif; }
+.hltr .vrtl { font-family: serif-ja-v, serif-ja, serif; }
+
+
+/* 書体指定
+---------------------------------------------------------------- */
+/* 横組み用 */
+.hltr .mfont { font-family: serif-ja, serif; }
+.hltr .gfont { font-family: sans-serif-ja, sans-serif;}
+/* 縦組み用 */
+.vrtl .mfont { font-family: serif-ja-v, serif-ja, serif; }
+.vrtl .gfont { font-family: sans-serif-ja-v, sans-serif-ja, sans-serif; }
+
+/* 組み方向の入れ子対策 */
+/* 縦組み中の横組み用 */
+.vrtl .hltr .mfont { font-family: serif-ja, serif; }
+.vrtl .hltr .gfont { font-family: sans-serif-ja, sans-serif; }
+/* 横組み中の縦組み用 */
+.hltr .vrtl .mfont { font-family: serif-ja-v, serif-ja, serif; }
+.hltr .vrtl .gfont { font-family: sans-serif-ja-v, sans-serif-ja, sans-serif; }
+
+
+

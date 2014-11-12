@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package
+ xmlns="http://www.idpf.org/2007/opf"
+ version="3.0"
+ xml:lang="ja"
+ unique-identifier="unique-id"
+ prefix="ebpaj: http://www.ebpaj.jp/"
+>
+
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<!-- 作品名 -->
+<dc:title id="title">蜘蛛の糸</dc:title>
+<meta refines="#title" property="file-as">クモノイト</meta>
+
+<!-- 著者名 -->
+<dc:creator id="creator01">芥川龍之介</dc:creator>
+<meta refines="#creator01" property="role" scheme="marc:relators">aut</meta>
+<meta refines="#creator01" property="file-as">アクタガワリュウノスケ</meta>
+<meta refines="#creator01" property="display-seq">1</meta>
+
+<!-- 出版社名 -->
+<dc:publisher id="publisher">日本電子書籍出版社協会</dc:publisher>
+<meta refines="#publisher" property="file-as">ニホンデンシシュッパンシャキョウカイ</meta>
+
+<!-- 言語 -->
+<dc:language>ja</dc:language>
+
+<!-- ファイルid -->
+<dc:identifier id="unique-id">urn:uuid:707317b8-acab-46c2-a171-2da9afaec4bf</dc:identifier>
+
+<!-- 更新日 -->
+<meta property="dcterms:modified">2012-12-07T00:00:00Z</meta>
+
+<!-- etc. -->
+<meta property="ebpaj:guide-version">1.1.1</meta>
+
+</metadata>
+
+<manifest>
+
+<!-- navigation -->
+<item media-type="application/xhtml+xml" id="toc" href="navigation-documents.xhtml" properties="nav"/>
+
+<!-- style -->
+<item media-type="text/css" id="book-style"     href="style/book-style.css"/>
+<item media-type="text/css" id="style-reset"    href="style/style-reset.css"/>
+<item media-type="text/css" id="style-standard" href="style/style-standard.css"/>
+<item media-type="text/css" id="style-advance"  href="style/style-advance.css"/>
+<item media-type="text/css" id="style-check"    href="style/style-check.css"/>
+
+<!-- image -->
+<item media-type="image/jpeg" id="cover"           href="image/cover.jpg" properties="cover-image"/>
+<item media-type="image/png"  id="logo-bunko"      href="image/logo-bunko.png"/>
+<item media-type="image/gif"  id="headmark"        href="image/headmark.gif"/>
+<item media-type="image/png"  id="gaiji-min-u728d" href="image/gaiji-min-u8fe6.png"/>
+<item media-type="image/jpeg" id="img-001"         href="image/img-001.jpg"/>
+<item media-type="image/png"  id="img-002"         href="image/img-002.png"/>
+<item media-type="image/png"  id="img-003"         href="image/img-003.png"/>
+<item media-type="image/png"  id="img-004"         href="image/img-004.png"/>
+
+<!-- xhtml -->
+<item media-type="application/xhtml+xml" id="p-cover"       href="xhtml/p-cover.xhtml"/>
+<item media-type="application/xhtml+xml" id="p-titlepage"   href="xhtml/p-titlepage.xhtml"/>
+<item media-type="application/xhtml+xml" id="p-caution"     href="xhtml/p-caution.xhtml"/>
+<item media-type="application/xhtml+xml" id="p-toc"         href="xhtml/p-toc.xhtml"/>
+<item media-type="application/xhtml+xml" id="p-001"         href="xhtml/p-001.xhtml"/>
+<item media-type="application/xhtml+xml" id="p-002"         href="xhtml/p-002.xhtml"/>
+<item media-type="application/xhtml+xml" id="p-cyushaku"    href="xhtml/p-cyushaku.xhtml"/>
+<item media-type="application/xhtml+xml" id="p-colophon"    href="xhtml/p-colophon.xhtml"/>
+
+</manifest>
+
+<spine page-progression-direction="rtl">
+
+<itemref linear="yes" idref="p-cover"      properties="page-spread-left"/>
+<itemref linear="yes" idref="p-titlepage"  properties="page-spread-left"/>
+<itemref linear="yes" idref="p-caution"/>
+<itemref linear="yes" idref="p-toc"/>
+<itemref linear="yes" idref="p-001"        properties="page-spread-left"/>
+<itemref linear="yes" idref="p-002"/>
+<itemref linear="yes" idref="p-cyushaku"/>
+<itemref linear="yes" idref="p-colophon"/>
+
+</spine>
+
+</package>
