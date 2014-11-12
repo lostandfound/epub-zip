@@ -1,7 +1,7 @@
 {
   "name": "epub-zip",
   "version": "0.0.1",
-  "description": "epub packager",
+  "description": "epub packager for Node.js",
   "main": "index.js",
   "author": "Hiroshi Takase",
   "license": "MIT",

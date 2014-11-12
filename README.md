@@ -1,6 +1,14 @@
 # epub-zip
 
-epub packager.
+epub packager for Node.js.
+
+## Install
+
+With npm do:
+
+```
+npm install epub-zip
+```
 
 ## Usage
 
