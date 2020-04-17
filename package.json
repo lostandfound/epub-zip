@@ -1,16 +1,19 @@
 {
   "name": "epub-zip",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "epub packager for Node.js",
   "main": "index.js",
   "author": "Hiroshi Takase",
   "license": "MIT",
   "dependencies": {
-    "jszip": "^2.4.0",
-    "lodash": "^2.4.1"
+    "jszip": "^2.6.1",
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
-    "chai": "^1.10.0",
-    "mocha": "^2.0.1"
+    "chai": "^4.2.0",
+    "mocha": "^7.1.1"
+  },
+  "scripts": {
+    "test": "mocha ./test/epub-zip.js"
   }
 }
