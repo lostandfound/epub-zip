@@ -1,3 +1,3 @@
-var epubZip = require('./lib/epub-zip');
+var epubZip = require("./lib/epub-zip");
 
 module.exports = epubZip;

@@ -13,11 +13,11 @@ npm install epub-zip
 ## Usage
 
 ```javascript
-var fs = require('fs');
-var epubZip = require('epub-zip');
+var fs = require("fs");
+var epubZip = require("epub-zip");
 
 var content = epubZip("./src");
-fs.writeFileSync("./dist/myAwsomeBook.epub", content);
+fs.writeFileSync("./dist/myAwesomeBook.epub", content);
 ```
 
 ## License
