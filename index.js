@@ -1,3 +1,3 @@
-var epubZip = require('./lib/epub-zip');
+import epubZip from './lib/epub-zip/index.mjs';
 
-module.exports = epubZip;
+export default epubZip; // 'default'エクスポートを追加
